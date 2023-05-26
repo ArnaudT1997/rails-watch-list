@@ -1,0 +1,16 @@
+<h1><%= @list.name %></h1>
+<h2>Bookmarked movies</h2>
+<ul class='bookmarked-movies'>
+  <% @list.bookmarks.each do |bookmark| %>
+    <li class="bookmarked-movie"><%= bookmark.movie.title %> - <%= bookmark.comment %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Go back', lists_path %>
+
+<h3>Add a new movie to this list !</h3>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit %>
+<% end %>

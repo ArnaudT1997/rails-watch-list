@@ -11,6 +11,23 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <div>
+        <%= image_tag "logo.jpg", alt: "Logo du site", class: "logo-top-left" %>
+      </div>
+      <div class="links">
+        <%= link_to 'My lists', lists_path %>
+        <%= link_to 'Create a new list', new_list_path %>
+      </div>
+    </div>
+
     <%= yield %>
+
+    <div class="footer" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/695644/pexels-photo-695644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+      <div class="container">
+        <h1>All credits<strong> to me</strong></h1>
+      </div>
+    </div>
+
   </body>
 </html>

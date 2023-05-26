@@ -1,0 +1,36 @@
+.background {
+  background-image: url("https://images.pexels.com/photos/65128/pexels-photo-65128.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-size: contain;
+}
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+.list {
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  width: 150px;
+  padding: 10px;
+  margin: 20px;
+  word-break: break-all;
+  background-color: #306599;
+  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.list:hover {
+  background-color: white;
+  a {
+    color: #306599;
+  }
+}
